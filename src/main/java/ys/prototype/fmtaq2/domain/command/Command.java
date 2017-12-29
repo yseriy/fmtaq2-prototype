@@ -51,7 +51,7 @@ public abstract class Command {
                 handleErrorResponse(commandService);
                 break;
             default:
-                throw new IllegalArgumentException("unknown commandResponse status: " + commandResponse.getStatus());
+                throw new RuntimeException("unknown commandResponse status: " + commandResponse.getStatus());
         }
     }
 
